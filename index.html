@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Page</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="videoPage" class="video-page">
+        <h1>Welcome - Watch the Introduction Video</h1>
+        
+        <div class="video-container">
+            <video controls>
+                <source src="video.mp4" type="video/mp4">
+                <track src="subtitles.vtt" kind="subtitles" srclang="en" label="English" default>
+                Your browser does not support the video tag
+            </video>
+        </div>
+        
+        <button class="cv-button" onclick="goToCV()">
+            📄 View My CV
+        </button>
+    </div>
+
+    <div id="cvPage" class="cv-page">
+        <button class="back-button" onclick="goBackToVideo()">← Back to Video</button>
+        
+          <div class="container">
+        <div class="header">
+            <div class="header-text">
+                <h1> Rodina Tarek Said</h1>
+                <p>Computer Engineer</p>
+            </div>
+            <div class="photo">
+                <img src="mypic.jpg.jpeg" >
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">Personal Information</div>
+            <div class="row1">📧 <strong>Email:</strong> rodinatarek53@gmail.com</div>
+            <div class="row2">📱 <strong>Phone:</strong> +20 127 606 9218</div>
+            <div class="row3">📍 <strong>Address:</strong>Alexandria,Egypt</div>
+            <div class="row4">🎂 <strong>Date of Birth:</strong> 25/08/2005</div>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">About Me</div>
+            <p style="font-size: 14px; line-height: 1.6; color: #555;">
+                I am a third-year Computer Engineering student with a strong passion for web development and user interface design. My goal is to become a skilled Front-End Developer, creating responsive and user-friendly websites that provide excellent user experiences. I am continuously learning new technologies and frameworks to enhance my skills in HTML, CSS, JavaScript, and modern front-end tools.
+            </p>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">Education</div>
+            
+            <div class="item">
+                <div class="item-date">2023 - 2028</div>
+                <div class="item-title">Bachelor of Engineering - Computer Engineering</div>
+                <div class="item-subtitle">Pharos University in Alexandria</div>
+                <div class="item-description">
+                    Currently a third-year student in the Computer Engineering department at the Faculty of Engineering, focusing on software development, programming, and web technologies.
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="section-title">Work Experience</div>
+            
+            <div class="item">
+                <div class="item-date">2024 - Present</div>
+                <div class="item-title">Google Publishing Specialist</div>
+                <div class="item-subtitle">Freelance</div>
+                <div class="item-description">
+                    Managing and publishing content on Google platforms. Responsible for content optimization, ensuring quality standards, and maintaining consistent publishing schedules.
+                </div>
+            </div>
+            
+            <div class="item">
+                <div class="item-date">2023 - 2024</div>
+                <div class="item-title">English Teacher Assistant</div>
+                <div class="item-subtitle">Educational Institution</div>
+                <div class="item-description">
+                    Assisted in teaching English language courses, preparing lesson materials, supporting students with their assignments, and helping maintain an engaging learning environment.
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">Skills</div>
+            <div class="info-row">• HTML, CSS, JavaScript</div>
+            <div class="info-row">• Python, Java</div>
+            <div class="info-row">• UI/UX Design</div>
+            <div class="info-row">• Communication & Teamwork</div>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">Languages</div>
+            <div class="info-row"><strong>ِArabic:</strong>  Mother tongue</div>
+            <div class="info-row"><strong>English:</strong> Fluent</div>
+            <div class="info-row"><strong>Français:</strong> Intermediate</div>
+        </div>
+    </div>
+
+
+    <script>
+        function goToCV() {
+            document.getElementById('videoPage').style.display = 'none';
+            document.getElementById('cvPage').classList.add('active');
+            window.scrollTo(0, 0); 
+        }
+
+        function goBackToVideo() {
+            document.getElementById('cvPage').classList.remove('active');
+            document.getElementById('videoPage').style.display = 'block';
+            window.scrollTo(0, 0); 
+        }
+    </script>
+</body>
+</html>
